@@ -1,6 +1,15 @@
 body {
-  background: peru;
-  a {
+  background: yellow;
+  h2 {
     color: blue;
+    font-size: 30px;
+    font-family: "Courier New";
+    &:hover {
+      color: white;
+      font-size: 40px;
+      font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+        "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    }
+    background-color: yellowgreen;
   }
 }
