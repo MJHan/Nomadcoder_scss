@@ -19,3 +19,7 @@
 - NomadCoder SCSS 기본 설정 : https://github.com/serranoarevalo/scss-boilerplate
 - SCSS Masterclass(강의소스) : https://github.com/nomadcoders/scss-masterclass.git
 - NomadCoder 강의 : https://nomadcoders.co/css-layout-masterclass/lobby
+
+## Clone site list
+
+- https://besthorrorscenes.com/

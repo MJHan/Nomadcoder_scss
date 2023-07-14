@@ -1,15 +1,165 @@
+@import "_variables";
+
+@font-face {
+  font-family: Trueno;
+  src: url("../font/TruenoRg.otf") format("opentype");
+}
+
+@font-face {
+  font-family: Trueno;
+  font-weight: bold;
+  src: url("../font/TruenoSBd.otf") format("opentype");
+}
+
+* {
+  box-sizing: border-box;
+}
+
 body {
-  background: yellow;
+  height: 100vh;
+  font-family: Trueno, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  background-color: $white;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: $fixedWidth;
+  height: 100%;
+  padding: 10vh 0 22px 72px;
+  display: flex;
+  padding-left: 70px;
+  flex-direction: column;
+  justify-content: space-between;
+  color: $red;
+  h1 {
+    font-size: 72px;
+    letter-spacing: 0px;
+    text-transform: uppercase;
+    width: 200px;
+    margin-bottom: 60px;
+  }
   h2 {
-    color: blue;
-    font-size: 30px;
-    font-family: "Courier New";
-    &:hover {
-      color: white;
-      font-size: 40px;
-      font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-        "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    font-size: 25px;
+    font-weight: 200;
+    width: 65%;
+    margin-top: 60px;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+  }
+  p {
+    line-height: 1.3;
+    text-align: justify;
+    word-spacing: 3px;
+    letter-spacing: 0px;
+    width: 70%;
+    margin-bottom: 30px;
+  }
+  h3 {
+    font-size: 11px;
+    width: 70%;
+    line-height: 1.3;
+    color: $grey;
+    margin-bottom: 30px;
+  }
+  nav {
+    width: 65%;
+    margin-bottom: 20px;
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      li {
+        cursor: pointer;
+        margin-right: 12px;
+        font-size: 14px;
+        color: black;
+        opacity: 0.6;
+        padding-bottom: 5px;
+        border-bottom: 1px solid rgba(0, 0, 0, 1);
+        margin-bottom: 5px;
+        &:hover {
+          opacity: 1;
+        }
+      }
     }
-    background-color: yellowgreen;
+  }
+}
+.contentTop {
+  color: $white;
+  width: $contentWidth;
+  position: fixed;
+  left: $fixedWidth;
+  top: 0;
+  padding: 60px 140px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 17px;
+  letter-spacing: 1px;
+  .underline {
+    text-decoration: underline;
+    color: #000;
+    cursor: pointer;
+    &:hover {
+      opacity: 1;
+    }
+  }
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  background-color: $red;
+  gap: 5px;
+}
+main {
+  margin-top: 130px;
+  margin-left: $fixedWidth;
+  background-color: $red;
+  color: $white;
+
+  border-color: #000;
+  border-width: 1px;
+  border-style: inset;
+  .movie {
+    background: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.1) 1px,
+        transparent,
+        transparent,
+        transparent,
+        transparent,
+        transparent,
+        transparent
+      )
+      $red;
+    padding-top: 115px;
+    padding-bottom: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    .wrapper {
+      width: 80%;
+      display: flex;
+      flex-direction: column;
+      .movie__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 25px;
+        h4 {
+          font-family: "Apple LiGothic", Helvetica;
+          font-size: 70px;
+        }
+        h5 {
+          letter-spacing: 2px;
+          text-align: right;
+        }
+      }
+    }
+    img {
+      width: 100%;
+      box-shadow: 0 80px 80px -80px #000, 0 0 12px rgba(0, 0, 0, 0.06),
+        inset 0 0 0 1px rgba(0, 0, 0, 0.2);
+    }
   }
 }
