@@ -10,10 +10,16 @@ const sass = gulpSass(sass2);
 const routes = {
   css: {
     watch: "src/scss/*",
-    src: "src/scss/styles.scss",
+    src: "src/scss/*.scss",
     dest: "dist/css",
   },
+  font: {
+    src: "src/font/*.otf ",
+    dest: "dist/font",
+  },
 };
+
+const fonts = () => gulp.src(routes.font.src).pipe(gulp.dest(routes.font.dest));
 
 const styles = () =>
   gulp
@@ -36,7 +42,7 @@ const clean = async () => await deleteSync(["dist/"]);
 
 const prepare = gulp.series([clean]);
 
-const assets = gulp.series([styles]);
+const assets = gulp.series([styles, fonts]);
 
 const live = gulp.parallel([watch]);
 
