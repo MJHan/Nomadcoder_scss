@@ -53,3 +53,5 @@ const assets = gulp.series([styles, fonts, htmls]);
 const live = gulp.parallel([watch]);
 
 export const dev = gulp.series([prepare, assets, live]);
+
+export const deploy = gulp.series([prepare, assets]);

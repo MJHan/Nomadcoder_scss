@@ -4,7 +4,7 @@
   "scripts": {
     "dev": "gulp dev",
     "deploy": "gh-pages -d dist",
-    "predeploy": "npm run dev"
+    "predeploy": "gulp deploy"
   },
   "type": "module",
   "license": "MIT",
