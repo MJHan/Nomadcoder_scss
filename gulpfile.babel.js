@@ -17,9 +17,14 @@ const routes = {
     src: "src/font/*.otf ",
     dest: "dist/font",
   },
+  html: {
+    src: "index.html",
+    dest: "dist",
+  },
 };
 
 const fonts = () => gulp.src(routes.font.src).pipe(gulp.dest(routes.font.dest));
+const htmls = () => gulp.src(routes.html.src).pipe(gulp.dest(routes.html.dest));
 
 const styles = () =>
   gulp
@@ -36,13 +41,14 @@ const styles = () =>
 
 const watch = () => {
   gulp.watch(routes.css.watch, styles);
+  gulp.watch(routes.html.src, htmls);
 };
 
 const clean = async () => await deleteSync(["dist/"]);
 
 const prepare = gulp.series([clean]);
 
-const assets = gulp.series([styles, fonts]);
+const assets = gulp.series([styles, fonts, htmls]);
 
 const live = gulp.parallel([watch]);
 
