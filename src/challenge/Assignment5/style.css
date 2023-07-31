@@ -1,5 +1,5 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
-@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic&family=Kanit:wght@300;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic&family=Kanit:wght@300;350&display=swap");
 
 body {
   font-family: Kanit, "IBM Plex Sans", Arial;
@@ -12,6 +12,7 @@ body {
   grid-template-rows: repeat(3, 1fr);
   text-transform: uppercase;
   overflow: hidden;
+  font-weight: 350;
 }
 
 header {
@@ -33,27 +34,30 @@ aside:first-of-type {
 }
 
 h5 {
-  padding-bottom: 20px;
   font-size: 2vh;
+}
+
+section {
+  padding: 0px 0px 0px 20px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
 
 #speakers {
   grid-column: 3 / 4;
   grid-row: 1 / 4;
-  padding: 20px 10px 0.1vh 20px;
-  overflow-y: auto;
 }
 
 #artists {
   grid-column: 4 / 5;
   grid-row: 1 / 4;
-  padding: 20px 10px 0.1vh 20px;
-  overflow-y: auto;
 }
 
 #speakers li,
 #artists li {
-  font-size: 3.4vh;
+  font-size: 3.3vh;
 }
 
 #speakers li:hover {
@@ -97,12 +101,4 @@ footer {
 .logo {
   width: 200px;
   height: 200px;
-}
-
-.selectedPurple {
-  background-color: #6c00ff;
-}
-
-.selectedYellow {
-  background-color: #ffc904;
 }
