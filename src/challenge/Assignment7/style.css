@@ -1,0 +1,77 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  width: 100%;
+  height: 100vh;
+  background-color: black;
+  margin: 0px;
+  padding: 0px;
+  display: grid;
+  grid-template-rows: auto auto;
+  font-size: 14px;
+}
+
+header {
+  width: 100%;
+  display: grid;
+  /* grid-template-columns: repeat(5, 1fr); */
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: black;
+  padding: 0px;
+  margin: 0px;
+  gap: 2.5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+select {
+  height: 100%;
+  color: black;
+  padding: 0.8em 0.5em;
+  background: url("arrow.jpg") no-repeat 95% 50%;
+  background-color: white;
+  border-radius: 0px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  font-size: 14px;
+}
+select::-ms-expand {
+  display: none;
+  background-color: white;
+}
+
+main {
+  display: grid;
+  /* grid-template-columns: repeat(3, 1fr); */
+  grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+  gap: 5px;
+}
+article {
+  background-color: white;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-row: 30px auto 30px;
+  padding: 20px 20px 20px 20px;
+}
+.title {
+  text-align: right;
+}
+.image {
+  grid-column: span 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10% 10% 10% 10%;
+}
+img {
+  width: 100%;
+}
+.link {
+  text-align: right;
+  text-decoration: underline;
+}

@@ -1,0 +1,189 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+@import url("https://fonts.googleapis.com/css2?family=Lalezar&family=Noto+Sans+Symbols+2&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "IBM Plex Sans Arabic";
+  width: 100%;
+  height: 100vh;
+  background-color: #f2e656;
+  padding: 10px;
+  display: grid;
+  grid-template-columns: 45px auto auto 45px;
+  grid-template-rows: 40px auto 40px auto 80px 40px;
+  overflow: hidden;
+  font-size: 20px;
+  font-weight: 600;
+  font-style: italic;
+  text-transform: uppercase;
+  color: #fd6a37;
+}
+
+/* position : absolute */
+#title {
+  position: absolute;
+  width: 500px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: Lalezar;
+  font-size: 150px;
+  font-style: normal;
+  text-align: center;
+  color: white;
+}
+
+#talk {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  bottom: 0;
+  right: 0;
+  margin-right: 40px;
+  margin-bottom: 40px;
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* common things */
+.fillOrange {
+  background-color: #fd6a37;
+  border-radius: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.borderOrange {
+  border-top: 3px solid #fd6a37;
+  border-left: 3px solid #fd6a37;
+  border-right: 3px solid #fd6a37;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* grid area styling */
+header,
+footer {
+  grid-column: span 4;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  border-bottom: 3px solid #fd6a37;
+}
+
+@keyframes marquee {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: -100%;
+  }
+}
+
+.marquee .outer {
+  overflow: hidden;
+}
+
+.marquee .outer .inner {
+  position: relative;
+  width: 200%;
+  display: flex;
+  align-items: center;
+}
+
+.marquee .outer .inner:nth-child(1) {
+  animation: marquee 10s linear infinite;
+}
+
+.marquee .outer .inner .content {
+  width: 50%;
+}
+
+nav {
+  grid-row: span 2;
+  background-color: #fd6a37;
+}
+
+.link ul {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.link li {
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  color: white;
+  font-size: 17px;
+  letter-spacing: -5px;
+}
+.link a {
+  color: white;
+}
+
+#newsletter {
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#newsletter a {
+  color: #fd6a37;
+  white-space: nowrap;
+  transform: rotate(-90deg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#sns {
+  background-color: white;
+}
+
+#sns ul {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+main {
+  grid-column: span 2;
+  grid-row: span 4;
+  display: flex;
+  justify-content: space-between;
+}
+
+main div {
+  width: 50%;
+}
+
+#image1 {
+  background: url("https://images.unsplash.com/photo-1585937421612-70a008356fbe?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW5kaWFuJTIwZm9vZHxlbnwwfHwwfHx8MA%3D%3D&w=1000&q=80")
+    no-repeat;
+  background-size: cover;
+}
+
+#image2 {
+  background: url("https://cdn.pixabay.com/photo/2020/03/22/17/09/curry-leaf-4957820_640.jpg")
+    no-repeat;
+  background-size: cover;
+}
+
+#order {
+  background-color: #45ab4f;
+}
+
+#reservation {
+  grid-row: span 3;
+  background-color: #45ab4f;
+}
